@@ -72,13 +72,13 @@ function WireframeGlobe({ isMobile }: { isMobile: boolean }) {
 
     useFrame((state, delta) => {
         if (globeRef.current) {
-            // @ts-expect-error
+            // @ts-expect-error because it won't be null
             globeRef.current.rotation.y += delta * 0.1
         }
         if (gridRef.current) {
-            // @ts-expect-error
+            // @ts-expect-error because it won't be null 2
             gridRef.current.rotation.y -= delta * 0.05
-            // @ts-expect-error
+            // @ts-expect-error because it won't be null 3
             gridRef.current.rotation.x += delta * 0.03
         }
     })
