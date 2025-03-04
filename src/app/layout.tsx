@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://aurora.fedox.ovh",
-    title: "The Aurora Framework | Next-Gen Garry's Mod Development",
+    title: "The Aurora Framework | Built for Innovation",
     description: "A new Garry's Mod gamemode framework built for innovation, performance, and developer experience.",
     siteName: "The Aurora Framework",
     images: [
