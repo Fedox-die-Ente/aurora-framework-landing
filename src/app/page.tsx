@@ -72,13 +72,13 @@ function WireframeGlobe({ isMobile }: { isMobile: boolean }) {
 
     useFrame((state, delta) => {
         if (globeRef.current) {
-            // @ts-ignore
+            // @ts-expect-error
             globeRef.current.rotation.y += delta * 0.1
         }
         if (gridRef.current) {
-            // @ts-ignore
+            // @ts-expect-error
             gridRef.current.rotation.y -= delta * 0.05
-            // @ts-ignore
+            // @ts-expect-error
             gridRef.current.rotation.x += delta * 0.03
         }
     })
@@ -87,7 +87,6 @@ function WireframeGlobe({ isMobile }: { isMobile: boolean }) {
     const position: [number, number, number] = isMobile ? [2, 0, -3] : [4, 1, -4]
     const scale = isMobile ? 0.8 : 1
 
-    // @ts-ignore
     return (
         <group position={position} rotation={[0.5, 0.5, 0]} scale={scale}>
             <Float speed={1} rotationIntensity={0.1} floatIntensity={0.3}>
